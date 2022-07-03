@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/grid"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:background="#fff">
+
+        <GridLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:columnCount="1">
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="#fff"/>
+        </GridLayout>
+        <GridLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="18sp"
+            android:columnCount="1">
+            <TextView
+                android:id="@+id/ans"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25sp"
+                android:background="#fff"/>
+        </GridLayout>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:columnCount="4"
+        android:background="#000">
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:textColor="#B8B8B8"
+            android:textAllCaps="false"
+            android:onClick="Click"
+            android:text="e" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:layout_margin="8dp"
+            android:textColor="#B8B8B8"
+            android:textAllCaps="false"
+            android:onClick="Click"
+
+            android:text="π"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:layout_margin="8dp"
+            android:textColor="#B8B8B8"
+            android:textAllCaps="false"
+            android:onClick="Click"
+            android:text="x^2"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn4"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:layout_margin="8dp"
+            android:textColor="#B8B8B8"
+            android:textAllCaps="false"
+            android:onClick="Click"
+            android:text="AC"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#FD1100"
+            android:layout_margin="8dp"
+            android:onClick="Click"
+            android:text="c"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/left_bracket"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:layout_margin="8dp"
+            android:textColor="#B8B8B8"
+            android:onClick="Click"
+            android:text="("/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/right_bracket"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:layout_margin="8dp"
+            android:textColor="#B8B8B8"
+            android:onClick="Click"
+            android:text=")"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/division"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#9C27B0"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            android:onClick="Click"
+            android:text="/"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/seven"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:layout_margin="8dp"
+            android:textColor="#fff"
+            android:onClick="Click"
+            android:text="7"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/eight"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:layout_margin="8dp"
+            android:textColor="#fff"
+            android:onClick="Click"
+            android:text="8"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nine"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:layout_margin="8dp"
+            android:textColor="#fff"
+            android:onClick="Click"
+            android:text="9"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/multiply"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#9C27B0"
+            android:layout_margin="8dp"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:onClick="Click"
+            android:text="*"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/four"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:layout_margin="8dp"
+            android:textColor="#fff"
+            android:onClick="Click"
+            android:text="4"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/five"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:layout_margin="8dp"
+            android:textColor="#fff"
+            android:onClick="Click"
+            android:text="5"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/six"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#2b2b2b"
+        android:layout_margin="8dp"
+            android:textColor="#fff"
+            android:onClick="Click"
+        android:text="6"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/minus"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#9C27B0"
+        android:layout_margin="8dp"
+            android:textSize="20sp"
+            android:onClick="Click"
+        android:text="-"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/one"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#2b2b2b"
+        android:layout_margin="8dp"
+            android:textColor="#fff"
+            android:onClick="Click"
+        android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/two"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#2b2b2b"
+        android:layout_margin="8dp"
+            android:textColor="#fff"
+            android:onClick="Click"
+        android:text="2"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/three"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#2b2b2b"
+        android:layout_margin="8dp"
+            android:textColor="#fff"
+            android:onClick="Click"
+        android:text="3"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plus"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#9C27B0"
+        android:layout_margin="8dp"
+        android:textSize="20sp"
+            android:onClick="Click"
+        android:text="+"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/zero"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:layout_columnSpan="2"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:textColor="#fff"
+            android:onClick="Click"
+            android:text="0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dot"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#2b2b2b"
+            android:textColor="#fff"
+            android:onClick="Click"
+            android:text="."/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/equal"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#02FFE7"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:onClick="Click"
+            android:text="=" />
+
+
+    </GridLayout>
+</RelativeLayout>
