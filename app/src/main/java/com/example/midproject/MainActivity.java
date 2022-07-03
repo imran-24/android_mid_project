@@ -9,10 +9,12 @@ import android.widget.TextView;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 public class MainActivity extends AppCompatActivity {
-    AppCompatButton btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,dot,plus,minus,multiplication,division,equal;
+    AppCompatButton btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,dot,plus,minus,multiplication,division,equal,cancel,euler,clear,pie,prev;
     TextView type,ans;
     String data = "";
-    String finalresult = "";
+    String result = "";
+    String previous="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
         minus = findViewById(R.id.minus);
         multiplication = findViewById(R.id.multiply);
         division = findViewById(R.id.division);
+        equal = findViewById(R.id.equal);
+        clear = findViewById(R.id.clear);
+        cancel = findViewById(R.id.cancel);
+        pie = findViewById(R.id.pie);
+        euler = findViewById(R.id.euler);
+        prev = findViewById(R.id.prev);
 
     }
     public void Click(View view) {
@@ -61,8 +69,18 @@ public class MainActivity extends AppCompatActivity {
             ans.setText("");
             return;
         }
-        if(buttonValue.equals("=")){
+        if(buttonValue.equals("prev")){
+            if(previous.equals("")) {
+                return;
+            }
+            else{
+                type.setText("");
+                buttonValue = previous;
+            }
 
+        }
+        if(buttonValue.equals("=")){
+            previous = type.getText().toString();
             data = ans.getText().toString();
             if(!data.equals("Syntax Error")) {
                 type.setText(data);
@@ -92,17 +110,15 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         else {
-            finalresult = calculation(data);
+            result = calculation(data);
         }
         if(data.equals("")){
             ans.setText("");
         }
 
         else {
-//            if(!finalresult.equals("Syntax Error")){
-//
-//                }
-            ans.setText(finalresult);
+
+            ans.setText(result);
         }
     }
 

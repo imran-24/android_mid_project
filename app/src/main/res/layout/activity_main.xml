@@ -37,7 +37,7 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:columnCount="1">
             <TextView
                 android:id="@+id/ans"
@@ -62,7 +62,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn1"
+            android:id="@+id/euler"
             android:layout_width="70dp"
             android:layout_height="36dp"
             android:layout_margin="8dp"
@@ -75,7 +75,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn2"
+            android:id="@+id/pie"
             android:layout_width="70dp"
             android:layout_height="36dp"
             android:background="@drawable/roundstyle"
@@ -89,7 +89,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn3"
+            android:id="@+id/prev"
             android:layout_width="70dp"
             android:layout_height="36dp"
             android:background="@drawable/roundstyle"
@@ -98,11 +98,11 @@
             android:textColor="#B8B8B8"
             android:textAllCaps="false"
             android:onClick="Click"
-            android:text="x^2"/>
+            android:text="prev"/>
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn4"
+            android:id="@+id/clear"
             android:layout_width="70dp"
             android:layout_height="36dp"
             android:background="@drawable/roundstyle"
